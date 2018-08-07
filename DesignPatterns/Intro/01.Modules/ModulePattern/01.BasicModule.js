@@ -1,5 +1,6 @@
 /*
   A module is a small unit of independent and reusable code. It is similar to a Class in Java and C# (but not exactly same)
+  A module helps us remove our variables and functions from the global scope and keep them encapsulated as a reusable entity (module)
   Below is a basic Tile module that will append a tile to the html page along with some data. 
 */
 
