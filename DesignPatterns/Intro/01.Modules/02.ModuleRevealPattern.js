@@ -2,25 +2,32 @@
   The Module Pattern has one drawback: everything in it is public. What if we want certain properties or functions of the Module to be
   private?
   To address this, we have the Module Reveal Pattern.
-  We enclose the module in a function. The function returns the module 
+  Only the properties and functions we want to reveal are included in the final return object.
 */
 
-var Tile = 
+var Tile = (function()
 {
-    width   : 100,
-    height  : 100,
+    var width   = 100;
+    var height  = 100;
   
-    add  : function(container, id)
+    var add  = function(container, id)
     {
         $(container).append("<div id='"+ id +"' height='" + this.height + "' width='" + this.width + "'> </div>");
-    },
+    }
     
-    appendText: function(line, id)
+    var appendText = function(line, id)
     {
         var tile = $('#' + id);
         $(tile).append(line);
     }
-}
+    
+    return                          //the revealed part of our module
+    {
+       add : add,
+       appendText : appendText
+    }
+  
+})();
 
 
 $(function(){
@@ -31,4 +38,6 @@ $(function(){
   Tile.add("body", 2);
   Tile.appendText("Line A", 2);
   Tile.appendText("Line B", 2);
+  
+  Tile.width = 120;             //width is not accessible from Tile anymore
 });
