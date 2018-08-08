@@ -2,7 +2,8 @@
   The Module Pattern has one drawback: everything in it is public. What if we want certain properties or functions of the Module to be
   private?
   To address this, we have the Module Reveal Pattern.
-  Only the properties and functions we want to reveal are included in the final return object.
+  Only those properties and functions are included in the final return object, that we want to expose as public. Rest everything remains
+  private
 */
 
 var Tile = (function()
