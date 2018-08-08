@@ -22,8 +22,7 @@
 
 var Tile = (function()
 {
-    return 
-    {
+    return {
         width   : 100,
         height  : 100,
 
