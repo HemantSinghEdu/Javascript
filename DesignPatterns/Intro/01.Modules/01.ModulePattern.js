@@ -12,7 +12,7 @@
             }
         })();
   
-  Basically, we have an anonymous function which is returning an object, and our module gets the object
+  Here, we have an anonymous function returning an object. The function is called immediately and the result allocated to module.
   
   Usage: We can call the module parameters as shown below
         console.log( module.echo() );
