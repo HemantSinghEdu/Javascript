@@ -22,8 +22,8 @@ var Tile = (function()
         $(tile).append(line);
     }
     
-    return                          //the revealed part of our module
-    {
+    return {                          //the revealed part of our module
+    
        add : add,
        appendText : appendText
     }
