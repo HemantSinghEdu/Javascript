@@ -30,27 +30,34 @@ var Tile = (function()
     return {
         width   : 100,
         height  : 100,
-
-        add  : function(container, id)
+              
+        addTile : function(container, id)
         {
-            $(container).append("<div id='"+ id +"' height='" + this.height + "' width='" + this.width + "'> </div>");
+            var parent = $(container);
+            var tileHTML = "<div id='"+ id +"' height='" + this.height + "' width='" + this.width + "'> </div>";
+            this.append(parent, tileHTML);
         },
 
         appendText: function(line, id)
         {
             var tile = $('#' + id);
-            $(tile).append(line);
+            this.append(tile, line);
+        },
+      
+        append  : function(element, content)
+        {
+            $(element).append(content);
         }
     }
 })();
 
 
 $(function(){
-  Tile.add("body", 1);                  //append a tile to the page
+  Tile.addTile("body", 1);                  //append a tile to the page
   Tile.appendText("Line 1", 1);
   Tile.appendText("Line 2", 1);
   
-  Tile.add("body", 2);                  //append a second tile to the page
+  Tile.addTile("body", 2);                  //append a second tile to the page
   Tile.appendText("Line A", 2);
   Tile.appendText("Line B", 2);
 });
