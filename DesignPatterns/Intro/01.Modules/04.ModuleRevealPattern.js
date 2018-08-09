@@ -13,7 +13,7 @@ var Tile = (function()
 
     var addTile  = function(container, tileId)
     {
-        var tileHTML = "<div id='"+ tileId +"' style='border:1px solid gray;padding:5px;margin:2px;display:inline-block;width:"+width+"px;height:"+height+"px;'> </div>";
+        var tileHTML = "<div id='"+ tileId +"' style='border:1px solid gray;padding:5px;margin:2px;float:left; width:"+width+"px;height:"+height+"px;'> </div>";
         append(container, tileHTML);
     }
     
@@ -46,6 +46,7 @@ $(function(){
   Tile.appendText("Line A", 2);
   Tile.appendText("Line B", 2);
   
-  //Tile.width = 120;               //width is not accessible from Tile anymore
-  //Tile.append("body", "Hello");   //append function is not accessible from Tile anymore
+  //we cannot access private members anymore
+  //Tile.width = 120;                        //width is not accessible from Tile anymore
+  //Tile.append("#2", "<div>Hello</div>");   //append function is not accessible from Tile anymore
 });
