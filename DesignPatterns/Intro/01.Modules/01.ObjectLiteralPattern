@@ -20,14 +20,14 @@
         console.log( logger.echo("This is a log") );
         
    The example below has two objects, each having a function called add. The add functions do not collide as they reside 
-   safely inside their objects
+   safely inside their wrapper objects
 */
 
 var appender = 
 {    
     add: function(line)
     {
-        $('#body').append(line);
+        $('body').append(line);
     }
 };
 
