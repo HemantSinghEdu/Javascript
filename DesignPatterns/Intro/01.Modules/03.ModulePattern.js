@@ -31,24 +31,24 @@ var Tile = (function()
         width   : 100,
         height  : 100,
               
-        addTile : function(container, id)
+        addTile : function(container, tileId)
         {
-            var parent = $(container);
-            var tileHTML = "<div id='"+ id +"' height='" + this.height + "' width='" + this.width + "'> </div>";
-            this.append(parent, tileHTML);
+            var tileHTML = "<div id='"+ tileId +"' style='border:1px solid gray;padding:5px;margin:2px;float:left; width:"+this.width+"px;height:"+this.height+"px;'> </div>";
+            this.append(container, tileHTML);
         },
 
-        appendText: function(line, id)
+        appendText: function(line, tileId)
         {
-            var tile = $('#' + id);
-            this.append(tile, line);
+            tileId = '#' + tileId;
+            line = '<div>'+line+'</div>';
+            this.append(tileId, line);
         },
-      
+
         append  : function(element, content)
         {
             $(element).append(content);
         }
-    }
+    };
 })();
 
 
@@ -60,4 +60,8 @@ $(function(){
   Tile.addTile("body", 2);                  //append a second tile to the page
   Tile.appendText("Line A", 2);
   Tile.appendText("Line B", 2);
+  
+  //drawback, we can still access all the members of the module. There is no privacy enforced
+  Tile.width = 120;                         //No privacy: width is not supposed to be public 
+  Tile.append("#2", "<div>Hello</div>");    //No privacy: append function is not supposed to be public
 });
