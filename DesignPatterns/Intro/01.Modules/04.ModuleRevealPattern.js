@@ -1,9 +1,9 @@
 /*
-  The Module Pattern has one drawback: everything in it is public. What if we want certain properties or functions of the Module to be
-  private?
-  To address this, we have the Module Reveal Pattern.
-  Only those properties and functions are included in the final return object, that we want to expose as public. Rest everything remains
-  private
+  The Module Pattern has one drawback: there is no privacy, everything in it is public. What if we want certain properties or 
+  functions of the Module to be private? To address this, we have the Module Reveal Pattern.
+  
+  The Module Reveal pattern keeps the variables and functions private by keeping them outside the return object. 
+  The return object is allowed to have only those properties and functions that we want to make public. 
 */
 
 var Tile = (function()
@@ -23,7 +23,6 @@ var Tile = (function()
     }
     
     return {                          //the revealed part of our module
-    
        add : add,
        appendText : appendText
     }
