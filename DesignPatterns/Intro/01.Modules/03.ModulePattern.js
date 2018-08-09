@@ -1,6 +1,7 @@
 /*
-  A module is a small unit of independent and reusable code. It is similar to a Class in Java and C# (but not exactly same)
-  A module helps us remove our variables and functions from the global scope and keep them encapsulated as a reusable entity
+  A module is a small unit of independent and reusable code. A module removes our variables and functions from the global scope 
+  and keeps them encapsulated as a reusable entity
+
   The basic structure of a module pattern is this:
         
         var module = (function()
@@ -12,12 +13,16 @@
             }
         })();
   
-  Here, we have an anonymous function returning an object. The function is invoked immediately and the result allocated to module.
+  Here, we have an IIFE (immediately invoked function expression) returning an object. The anonymous function is invoked 
+  immediately and the result allocated to module.
   
   Usage: We can call the module parameters as shown below
         console.log( module.echo() );
-        
-   Below is a basic Tile module that will append a tile to the html page along with some data. 
+ 
+  Module pattern behaves similar to Object Literal pattern. There is really no advantage of using one over the other. However,
+  that changes once we move on to the Module Reveal pattern, which gives the added benefit of introducing privacy.
+  
+  Below is a basic Tile module that will append a tile to the html page along with some data. 
 */
 
 var Tile = (function()
