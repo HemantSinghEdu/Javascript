@@ -1,7 +1,7 @@
 
-/* Class with methods added to the prototype
-   Methods that are defined inside a class are recreated every time a new object is created. 
-   On the other hand, methods defined on the prototype are only created once.
+/* Class with properties and methods added to the prototype
+   - Properties and methods that are added to the prototype can be inherited
+   - 
 */
 
 function Employee(firstName, lastName) {
