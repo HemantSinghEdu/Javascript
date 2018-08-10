@@ -3,7 +3,7 @@
     We use functions to simulate class-like behavior
 */
 
-//simple class
+//simple class - the "Employee" function used here to define the class is called the constructor function
 function Employee() {
   this.fname = "";
   this.lname = "";
