@@ -2,6 +2,8 @@
     In JavaScript, functions are objects, because they can have properties and methods just like any other object. 
     What distinguishes them from other objects is that functions can be called and they can return values. 
     In brief, they are Function objects.
+    
+    Following examples show the various ways in which we define and call functions
 */
 
 //a function declaration
