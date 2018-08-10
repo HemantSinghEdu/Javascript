@@ -42,11 +42,11 @@
 */
 
 ///global refers to global scope variable
-///jQuery refers to jquery module.We don't need to explicitly add jQuery as the input parameter, 
+///jQ refers to jquery module.We don't need to explicitly add jQuery as the input parameter, 
 ///but by doing so, we make it clear that our module uses jQuery
-(function(global, jQuery)     
+(function(global, jQ)     
 {
-      var $ = jQuery;       //specifying that jQuery will be used via the $ symbol as alias, inside our module (you can replace $ with any other symbol here)
+      var $ = jQ;       //specifying that jQuery will be used via the $ symbol as alias, inside our module (you can replace $ with any other symbol here)
       var HtmlHandler = (function()                     //HtmlHandler module will stay hidden from global scope
       {
           var append = function(element, content){
