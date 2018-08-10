@@ -1,3 +1,15 @@
+/* Class with empty constructor 
+   This is just our simple class that we defined in previous lesson
+   
+  function Employee() {
+    this.fname = firstName;
+    this.lname = lastName;
+    this.getName = function(){
+      return this.fname+' ' +this.lname;
+    }
+  }
+  
+*/
 
 //class with parameterized constructor
 function Employee(firstName, lastName) {
