@@ -37,7 +37,7 @@ function EmptyFun()
 function print(msg, value)
 {
     var tabspace = "<br/> &emsp;&emsp;";
-	$('body').append("<div>"+msg+tabspace+"this = "+value+"</div><br/>");
+    $('body').append("<div>"+msg+tabspace+"this = "+value+"</div><br/>");
 }
 
 
@@ -60,8 +60,8 @@ this_value = emptyFun.getNameOfClass();             //this = noFun object
 print("emptyFun.getNameOfClass", this_value);
 
 /* let's call a function normally, as well as create an object out of it */
-this_value = MixedFun();                            //this = window
+this_value = MixedFun();                            //this = window (when called normally)
 print("MixedFun()", this_value);
 var mixedFun = new MixedFun();                      
-this_value = mixedFun.getNameOfClass();             //this = MixedFun
+this_value = mixedFun.getNameOfClass();             //this = MixedFun (when called via new)
 print("emptyFun.getNameOfClass", this_value);
