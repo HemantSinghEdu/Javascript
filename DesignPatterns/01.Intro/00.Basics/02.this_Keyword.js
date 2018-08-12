@@ -27,7 +27,7 @@ function MixedFun()
     this.getNameOfClass = function(){
     	return nameOfClass;
     }
-    return this.nameOfClass;            //value will be returned only when called as a normal function
+    return this.nameOfClass;                        //value will be returned only when called as a normal function
 }
 
 function EmptyFun()
@@ -45,7 +45,7 @@ function print(msg, value)
 
 /* when an independent function is invoked normally, 'this' points to the global object i.e. window */
 var this_value;
-this_value = SimpleFun();		                    //this = window    
+this_value = SimpleFun();                           //this = window    
 print("SimpleFun()", this_value);			 
 
 /* when an independent function is invoked with the new keyword, 'this' points to the new object instance created */
