@@ -12,7 +12,7 @@ function Employee(firstName, lastName) {
 
 //defining a class function on the prototype
 Employee.prototype.getName = function(){
-  	return this.fname+' ' +this.lname;
+  return this.fname+' ' +this.lname;
 }
 
 //Usage
